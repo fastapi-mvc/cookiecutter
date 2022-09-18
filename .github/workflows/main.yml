@@ -60,6 +60,7 @@ jobs:
     needs: generate
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         workflow: [ 'main.yml',  'docs.yml']
 
