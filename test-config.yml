@@ -1,0 +1,13 @@
+default_context:
+  project_name: "example"
+  author: "Radosław Szamszur"
+  email: "github@rsd.sh"
+  repo_url: "https://github.com/fastapi-mvc/example"
+  redis: "yes"
+  github_actions: "yes"
+  aiohttp: "yes"
+  helm: "yes"
+  nix: "yes"
+  license": "MIT"
+  year: "2022"
+  fastapi_mvc_version: "x.y.z"
