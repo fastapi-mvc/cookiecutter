@@ -72,6 +72,8 @@ def set_nix():
                 "shell.nix",
                 "image.nix",
                 "default.nix",
+                "editable.nix",
+                ".github/workflows/nix.yml",
             ]
         )
 
