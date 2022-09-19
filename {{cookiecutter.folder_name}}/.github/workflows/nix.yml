@@ -1,3 +1,4 @@
+{%- raw %}
 name: ❄️ Nix CI ❄️
 
 on:
@@ -97,3 +98,4 @@ jobs:
         run: make unit-test
       - name: Run integration-tests
         run: make integration-test
+{%- endraw %}
