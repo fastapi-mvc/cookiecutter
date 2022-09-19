@@ -42,6 +42,9 @@ jobs:
           nix_path: nixpkgs=channel:nixos-22.05
       - name: Generate test project
         run: nix-shell -p cookiecutter --run "cookiecutter --config-file test-config.yml --no-input ."
+      - name: Generate poetry.lock
+        working-directory: ./example
+        run: nix-shell -p poetry --run "poetry lock --no-update"
       - name: Set short commit SHA
         run: echo "SHORT_SHA=${GITHUB_SHA::7}" >> $GITHUB_ENV
       - name: Push generated test project
