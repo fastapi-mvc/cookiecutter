@@ -22,7 +22,6 @@ Cookiecutter template used by [fastapi-mvc/fastapi-mvc](https://github.com/fasta
 * Makefile, GitHub actions and utilities
 * Helm chart for Kubernetes deployment
 * Dockerfile with K8s and cloud in mind
-* Generate pieces of code or even your own generators
 * Reproducible development environment using Vagrant or Nix
 
 ## Quickstart
