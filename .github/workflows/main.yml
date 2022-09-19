@@ -62,7 +62,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        workflow: [ 'main.yml',  'docs.yml']
+        workflow: [ 'main.yml',  'docs.yml', 'nix.yml']
 
     steps:
       - name: Dispatch ${{ matrix.workflow }} workflow
