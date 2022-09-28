@@ -91,5 +91,5 @@ jobs:
           repo: example
           owner: fastapi-mvc
           run_id: ${{ steps.return_dispatch.outputs.run_id }}
-          run_timeout_seconds: 600
+          run_timeout_seconds: 1200
           poll_interval_ms: 5000
