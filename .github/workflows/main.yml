@@ -64,7 +64,7 @@ jobs:
           destination-repository-name: 'example'
           user-name: "github-actions[bot]"
           user-email: github-actions[bot]@users.noreply.github.com
-          commit-message: ${{ format('[skip ci][{0}] Update generated project', env.SHORT_SHA) }}
+          commit-message: ${{ format('[skip ci][fastapi-mvc/cookiecutter@{0}] Update generated project', env.SHORT_SHA) }}
           target-branch: master
   dispatch-remote-workflow:
     needs: generate
