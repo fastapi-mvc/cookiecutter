@@ -1,4 +1,4 @@
-{ pkgs ? import <nixpkgs> { }
+{ pkgs ? import <nixpkgs> { overlays = [ (import ./overlay.nix) ]; }
 , name ? "{{cookiecutter.docker_image_name}}"
 , tag ? "latest"
 }:
@@ -15,6 +15,7 @@ pkgs.dockerTools.buildImage {
   contents = [
     app
     pkgs.cacert
+    pkgs.tzdata
   ];
 
   runAsRoot = ''
@@ -36,6 +37,6 @@ pkgs.dockerTools.buildImage {
     ];
     User = "nonroot";
     WorkingDir = "/workspace";
-    Entrypoint = [ "${pyEnv}/bin/{{cookiecutter.script_name}}" ];
+    Entrypoint = [ "${app}/bin/{{cookiecutter.script_name}}" ];
   };
 }
