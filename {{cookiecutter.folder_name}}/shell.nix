@@ -1,25 +1,19 @@
-{ pkgs ? import <nixpkgs> { }
+{ pkgs ? import <nixpkgs> { overlays = [ (import ./overlay.nix) ]; }
 , python ? "python3"
 }:
 
 let
-  pythonPackage = builtins.getAttr (python) pkgs;
-  poetry = pkgs.poetry.override { python = pythonPackage; };
+  app = pkgs.callPackage ./editable.nix {
+    python = builtins.getAttr (python) pkgs;
+    poetry2nix = pkgs.poetry2nix;
+  };
 in
-pkgs.mkShell {
+app.env.overrideAttrs (oldAttrs: {
   buildInputs = [
-    pkgs.curl
     pkgs.gnumake
+    pkgs.podman
     pkgs.kubernetes-helm
     pkgs.kubectl
     pkgs.minikube
-    pythonPackage
-    poetry
   ];
-  shellHook = ''
-    export POETRY_HOME=${poetry}
-    export POETRY_BINARY=${poetry}/bin/poetry
-    export POETRY_VIRTUALENVS_IN_PROJECT=true
-    unset SOURCE_DATE_EPOCH
-  '';
-}
+})

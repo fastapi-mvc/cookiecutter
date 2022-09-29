@@ -32,3 +32,6 @@ venv
 
 # direnv
 .direnv
+
+# Nix build result
+result

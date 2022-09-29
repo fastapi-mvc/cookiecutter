@@ -42,6 +42,16 @@ jobs:
           nix_path: nixpkgs=channel:nixos-22.05
       - name: Generate test project
         run: nix-shell -p cookiecutter --run "cookiecutter --config-file test-config.yml --no-input ."
+      - name: Setup poetry.lock cache
+        uses: actions/cache@v3
+        id: lock-cache
+        with:
+          path: ./example/poetry.lock
+          key: ${{ hashFiles('**/pyproject.toml') }}
+      - name: Generate poetry.lock
+        if: steps.lock-cache.outputs.cache-hit != 'true'
+        working-directory: ./example
+        run: nix-shell -p poetry --run "poetry lock --no-update"
       - name: Set short commit SHA
         run: echo "SHORT_SHA=${GITHUB_SHA::7}" >> $GITHUB_ENV
       - name: Push generated test project
@@ -54,7 +64,7 @@ jobs:
           destination-repository-name: 'example'
           user-name: "github-actions[bot]"
           user-email: github-actions[bot]@users.noreply.github.com
-          commit-message: ${{ format('[skip ci][{0}] Update generated project', env.SHORT_SHA) }}
+          commit-message: ${{ format('[skip ci][fastapi-mvc/cookiecutter@{0}] Update generated project', env.SHORT_SHA) }}
           target-branch: master
   dispatch-remote-workflow:
     needs: generate
@@ -62,7 +72,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        workflow: [ 'main.yml',  'docs.yml']
+        workflow: [ 'main.yml',  'docs.yml', 'nix.yml']
 
     steps:
       - name: Dispatch ${{ matrix.workflow }} workflow
@@ -81,5 +91,5 @@ jobs:
           repo: example
           owner: fastapi-mvc
           run_id: ${{ steps.return_dispatch.outputs.run_id }}
-          run_timeout_seconds: 600
+          run_timeout_seconds: 1200
           poll_interval_ms: 5000
