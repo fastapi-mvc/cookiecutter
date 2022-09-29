@@ -11,6 +11,7 @@ This file documents changes to [fastapi-mvc/cookiecutter](https://github.com/fas
 
 ### Internal
 
+* Update GitHub actions [#14](https://github.com/fastapi-mvc/cookiecutter/issues/14).PR [#16](https://github.com/fastapi-mvc/cookiecutter/pull/16)
 * Add CI workflow for executing template checks [#3](https://github.com/fastapi-mvc/cookiecutter/issues/3). PR [#6](https://github.com/fastapi-mvc/cookiecutter/pull/6)
 
 ## 0.1.0 (18.09.2022)
