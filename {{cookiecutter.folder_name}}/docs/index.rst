@@ -83,6 +83,7 @@ Deployed application stack in Kubernetes:
     redisfailover.databases.spotahome.com/redisfailover-persistent-keep   3m39s
     vagrant@ubuntu-focal:/syncd$ curl http://{{cookiecutter.folder_name}}.192.168.49.2.nip.io/api/ready
     {"status":"ok"}
+
 {%- else %}
 
 .. code-block:: bash
@@ -109,7 +110,7 @@ Deployed application stack in Kubernetes:
     vagrant@ubuntu-focal:/syncd$ curl http://{{cookiecutter.folder_name}}.192.168.49.2.nip.io/api/ready
     {"status":"ok"}
 
-{% endif %}
+{%- endif %}
 Documentation
 -------------
 
@@ -118,11 +119,10 @@ This part of the documentation guides you through all of the features and usage.
 .. toctree::
    :maxdepth: 2
 
-    install
-    {% if cookiecutter.redis == "yes" %}nix{% endif %}
-    usage
-    deployment
-
+   install
+   {% if cookiecutter.redis == "yes" %}nix{% endif %}
+   usage
+   deployment
 
 API Reference
 -------------
