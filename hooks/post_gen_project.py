@@ -76,6 +76,7 @@ def set_nix():
                 "overlay.nix",
                 "Nix.mk",
                 ".github/workflows/nix.yml",
+                "docs/nix.rst",
             ]
         )
 
