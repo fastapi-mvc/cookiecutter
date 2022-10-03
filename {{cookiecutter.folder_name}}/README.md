@@ -17,13 +17,12 @@
 
 ### Documentation
 
-Example generated project documentation: [https://fastapi-mvc.github.io/example](https://fastapi-mvc.github.io/example)
 {% if cookiecutter.github_actions == "yes" %}
 You should have documentation deployed to your project GitHub pages via [Build Docs workflow]({{cookiecutter.repo_url}}/actions/workflows/docs.yml)
 
 **NOTE!** You might need to enable GitHub pages for this project first.
 {% endif %}
-Build documentation:
+To build manually:
 ```shell
 make docs
 ```
