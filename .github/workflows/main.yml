@@ -42,6 +42,8 @@ jobs:
           nix_path: nixpkgs=channel:nixos-22.05
       - name: Generate test project
         run: nix-shell -p cookiecutter --run "cookiecutter --config-file test-config.yml --no-input ."
+      - name: Apply monkeypatch
+        run: nix-shell -p python3 --run "python monkeypatch.py example/.github/workflows/main.yml example/.github/workflows/nix.yml example/.github/workflows/docs.yml"
       - name: Setup poetry.lock cache
         uses: actions/cache@v3
         id: lock-cache
