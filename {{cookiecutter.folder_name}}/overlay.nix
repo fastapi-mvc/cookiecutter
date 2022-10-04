@@ -35,11 +35,23 @@ in
         buildInputs = old.buildInputs or [ ] ++ [ py-final.flit-core ];
       });
 
+      idna = py-prev.idna.overridePythonAttrs (old: {
+        buildInputs = old.buildInputs or [ ] ++ [ py-final.flit-core ];
+      });
+
+      sphinx = py-prev.sphinx.overridePythonAttrs (old: {
+        buildInputs = old.buildInputs or [ ] ++ [ py-final.flit-core ];
+      });
+
       uvicorn = py-prev.uvicorn.overridePythonAttrs (old: {
         buildInputs = old.buildInputs or [ ] ++ [ py-final.hatchling ];
         postPatch = ''
           substituteInPlace pyproject.toml --replace 'watchfiles>=0.13' 'watchfiles'
         '';
+      });
+
+      fastapi = py-prev.fastapi.overridePythonAttrs (old: {
+        buildInputs = old.buildInputs or [ ] ++ [ py-final.hatchling ];
       });
 
     });
