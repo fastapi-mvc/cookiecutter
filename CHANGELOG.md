@@ -2,6 +2,12 @@
 
 This file documents changes to [fastapi-mvc/cookiecutter](https://github.com/fastapi-mvc/cookiecutter). The release numbering uses [semantic versioning](http://semver.org).
 
+## Unreleased
+
+### Internal
+
+* Extend project documentation [#21](https://github.com/fastapi-mvc/cookiecutter/issues/21). PR [#20](https://github.com/fastapi-mvc/cookiecutter/pull/20)
+
 ## 0.2.0 (29.09.2022)
 
 ### Features
