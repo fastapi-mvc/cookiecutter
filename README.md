@@ -15,14 +15,16 @@ Cookiecutter template used by [fastapi-mvc/fastapi-mvc](https://github.com/fasta
 
 ## Features
 
-* Generated project Based on MVC architectural pattern
+* Generated project based on MVC architectural pattern
 * WSGI + ASGI production server
 * Generated project comes with Sphinx documentation and 100% unit tests coverage
 * Kubernetes deployment with Redis HA cluster
 * Makefile, GitHub actions and utilities
 * Helm chart for Kubernetes deployment
 * Dockerfile with K8s and cloud in mind
-* Reproducible development environment using Vagrant or Nix
+* Uses Poetry dependency management
+* Includes set of Nix expressions
+* Virtualized reproducible development environment using Vagrant
 
 ## Quickstart
 
