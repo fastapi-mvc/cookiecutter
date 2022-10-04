@@ -1,6 +1,6 @@
 import os
+from unittest import mock
 
-import mock
 import pytest
 from {{cookiecutter.package_name}}.cli.serve import serve
 
