@@ -36,7 +36,6 @@ requests = "~2.28.1"
 {%- if cookiecutter.aiohttp == "yes" %}
 aioresponses = "~0.7.3"
 {%- endif %}
-mock = "~4.0.3"
 flake8 = "~5.0.4"
 flake8-docstrings = "~1.6.0"
 flake8-import-order = "~0.18.1"

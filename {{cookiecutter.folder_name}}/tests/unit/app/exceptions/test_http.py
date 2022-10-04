@@ -1,5 +1,6 @@
+from unittest import mock
+
 import pytest
-import mock
 from {{cookiecutter.package_name}}.app.exceptions import (
     HTTPException,
     http_exception_handler,

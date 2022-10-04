@@ -7,6 +7,14 @@ This file documents changes to [fastapi-mvc/cookiecutter](https://github.com/fas
 ### Breaking Changes
 
 * Drop Python 3.7 support. PR [#23](https://github.com/fastapi-mvc/cookiecutter/pull/23)
+
+### Docs
+
+* Extend project documentation [#21](https://github.com/fastapi-mvc/cookiecutter/issues/21). PR [#20](https://github.com/fastapi-mvc/cookiecutter/pull/20)
+
+### Internal
+
+* Drop mock dev-dependency [#12](https://github.com/fastapi-mvc/cookiecutter/issues/12). PR [#25](https://github.com/fastapi-mvc/cookiecutter/pull/25)
 * Update dependencies. PR [#24](https://github.com/fastapi-mvc/cookiecutter/pull/24)
   * fastapi (0.82.0 -> 0.85.0)
   * aiohttp (3.8.1 -> 3.8.3)
@@ -19,10 +27,6 @@ This file documents changes to [fastapi-mvc/cookiecutter](https://github.com/fas
   * black (22.3.0 -> 22.8.0)
   * Sphinx (4.5.0 -> 5.2.3)
   * myst-parser (0.17.2 -> 0.18.1)
-
-### Docs
-
-* Extend project documentation [#21](https://github.com/fastapi-mvc/cookiecutter/issues/21). PR [#20](https://github.com/fastapi-mvc/cookiecutter/pull/20)
 
 ## 0.2.0 (29.09.2022)
 
