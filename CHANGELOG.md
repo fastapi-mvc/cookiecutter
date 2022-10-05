@@ -2,11 +2,15 @@
 
 This file documents changes to [fastapi-mvc/cookiecutter](https://github.com/fastapi-mvc/cookiecutter). The release numbering uses [semantic versioning](http://semver.org).
 
-## Unreleased
+## 0.3.0 (05.10.2022)
 
 ### Breaking Changes
 
 * Drop Python 3.7 support. PR [#23](https://github.com/fastapi-mvc/cookiecutter/pull/23)
+
+### Features
+
+* Add dependabot.yml [f750aa3](https://github.com/fastapi-mvc/cookiecutter/commit/f750aa3aa6914b0246e87d6ecab90f6d9cb7387e).
 
 ### Docs
 
@@ -14,6 +18,8 @@ This file documents changes to [fastapi-mvc/cookiecutter](https://github.com/fas
 
 ### Internal
 
+* Bump crazy-max/ghaction-github-pages from 2.5.0 to 3.0.0 [eb84359](https://github.com/fastapi-mvc/cookiecutter/commit/eb843596ed1743cba027f6ecfcb36c2b06762373).
+* Bump fkirc/skip-duplicate-actions from 3.4.1 to 5.2.0 [1b527a4](https://github.com/fastapi-mvc/cookiecutter/commit/1b527a451c6c47e8f0178ca5e85a0c06989809fb).
 * Remove hardcoded workflow_dispatch for return-dispatch action in GH workflow templates [#17](https://github.com/fastapi-mvc/cookiecutter/issues/17). PR [#26](https://github.com/fastapi-mvc/cookiecutter/pull/26)
 * Drop mock dev-dependency [#12](https://github.com/fastapi-mvc/cookiecutter/issues/12). PR [#25](https://github.com/fastapi-mvc/cookiecutter/pull/25)
 * Update dependencies. PR [#24](https://github.com/fastapi-mvc/cookiecutter/pull/24)
