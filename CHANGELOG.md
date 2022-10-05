@@ -10,7 +10,7 @@ This file documents changes to [fastapi-mvc/cookiecutter](https://github.com/fas
 
 ### Features
 
-* Add dependabot.yml [f750aa3](https://github.com/fastapi-mvc/cookiecutter/commit/f750aa3aa6914b0246e87d6ecab90f6d9cb7387e).
+* GH Actions: Add `dependabot.yml` [f750aa3](https://github.com/fastapi-mvc/cookiecutter/commit/f750aa3aa6914b0246e87d6ecab90f6d9cb7387e).
 
 ### Docs
 
