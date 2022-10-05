@@ -14,6 +14,7 @@ This file documents changes to [fastapi-mvc/cookiecutter](https://github.com/fas
 
 ### Internal
 
+* Remove hardcoded workflow_dispatch for return-dispatch action in GH workflow templates [#17](https://github.com/fastapi-mvc/cookiecutter/issues/17). PR [#26](https://github.com/fastapi-mvc/cookiecutter/pull/26)
 * Drop mock dev-dependency [#12](https://github.com/fastapi-mvc/cookiecutter/issues/12). PR [#25](https://github.com/fastapi-mvc/cookiecutter/pull/25)
 * Update dependencies. PR [#24](https://github.com/fastapi-mvc/cookiecutter/pull/24)
   * fastapi (0.82.0 -> 0.85.0)
