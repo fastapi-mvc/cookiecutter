@@ -1,10 +1,10 @@
 # Fastapi-mvc cookiecutter
 
-**NOTE! From [fastapi-mvc](https://github.com/fastapi-mvc/fastapi-mvc) version `0.18.0` onwards, cookiecutter is no longer used for scaffolding a new project.**
+## NOTE! 
+
+**From [fastapi-mvc](https://github.com/fastapi-mvc/fastapi-mvc) version `0.18.0` onwards, cookiecutter is no longer used for scaffolding a new project.**
 
 ---
-
-Cookiecutter template used by [fastapi-mvc/fastapi-mvc](https://github.com/fastapi-mvc/fastapi-mvc) to generate a new project.
 
 ## Features
 
